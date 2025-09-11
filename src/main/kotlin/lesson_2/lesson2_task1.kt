@@ -8,7 +8,7 @@ fun main(){
     val fourthValue = 5
     val studentCount = 4
 
-    val averageValue: Double = (firstValue + secondValue + thirdValue + fourthValue).toDouble()/studentCount
+    val averageValue: Double = (firstValue + secondValue + thirdValue + fourthValue).toDouble() / studentCount
 
     println(averageValue)
 }
