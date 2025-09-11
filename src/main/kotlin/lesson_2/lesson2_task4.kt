@@ -2,12 +2,12 @@ package org.example.lesson_2
 
 fun main(){
 
-    val buff = 0.2
+    val buffPercent = 20
     val crystalOre = 7
     val ironOre = 11
 
-    val countBuffCrystal = (crystalOre * buff).toInt()
-    val countBuffIron = (ironOre * buff).toInt()
+    val countBuffCrystal: Int = (crystalOre * buffPercent / 100)
+    val countBuffIron: Int = (ironOre * buffPercent / 100)
 
     println(countBuffCrystal)
     println(countBuffIron)
