@@ -5,12 +5,11 @@ fun main(){
     var dayNumber = 5
 
     val isHandAndPressDay = dayNumber % 2 != 0
-    val isLegsAndBackDay = dayNumber % 2 == 0
 
     var hands = isHandAndPressDay
     var press = isHandAndPressDay
-    var back = isLegsAndBackDay
-    var legs = isLegsAndBackDay
+    var back = !isHandAndPressDay
+    var legs = !isHandAndPressDay
 
     println("""
         Упражнение для рук:    $hands
