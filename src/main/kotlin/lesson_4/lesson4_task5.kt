@@ -1,14 +1,21 @@
 package org.example.lesson_4
 
-fun main() {
+const val MIN_CREW = 55
+const val MAX_CREW = 70
+const val MIN_FOOD_BOXES = 50
+const val FULL_CREW = 70
 
+const val NO_DAMAGE = false
+const val GOOD_WEATHER = true
+
+fun main() {
     val hasDamage = false
-    val crewCount = 68
-    val supplyBoxes = 55
+    val crewSize = 70
+    val foodBoxes = 60
     val isWeatherGood = true
 
-    val canSail = (!hasDamage && crewCount >= 55 && crewCount <= 70 && supplyBoxes > 50) ||
-            (hasDamage && crewCount == 70 && supplyBoxes >= 50 && isWeatherGood)
+    val canSail =
+        (hasDamage == NO_DAMAGE && crewSize >= MIN_CREW && crewSize <= MAX_CREW && foodBoxes > MIN_FOOD_BOXES) || (hasDamage != NO_DAMAGE && crewSize == FULL_CREW && isWeatherGood == GOOD_WEATHER && foodBoxes >= MIN_FOOD_BOXES)
 
     println("Корабль может отплыть: $canSail")
 
